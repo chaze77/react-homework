@@ -1,25 +1,60 @@
-import logo from './logo.svg';
-import './App.css';
+import Section from './Components/Section/Section';
+import Footer from './Components/Footer/Footer';
+import Header from './Components/Header/Header';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App = ()=> {
+
+    let users = [ {
+        model: 'EPIX PRO',
+        modification: 'workstation',
+        price: 140100,
+        id: 1,
+
+    },
+    {
+        model: 'NANO PRO',
+        modification: 'workstation',
+        price: 173300,
+        id: 2,
+
+    },
+    {
+        model: 'LUMEN PRO',
+        modification: 'workstation',
+        price:178100,
+        id:3,
+
+    },
+    {
+        model:'CYBER',
+        modification: 'gamestation',
+        price: 334600, 
+        id:4,
+
+    },
+    {
+        model:'CONCEPT',
+        modification:'gamestation',
+        price: 775600,
+        id: 5,
+
+    }
+
+
+    ];
+
+
+return(
+
+    <div className='container'>
+<Header />
+<Section users = {users} />  
+<Footer />
+</div>
+
+)
+
 }
 
 export default App;
